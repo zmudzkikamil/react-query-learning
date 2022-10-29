@@ -9,6 +9,7 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 import RQSuperhero from './views/RQSuperhero'
 import ParallelQueries from './views/ParallelQueries'
 import DynamicParallel from './views/DynamicParallel'
+import DependentQueries from './views/DependentQueries'
 
 const queryClient = new QueryClient()
 const App: React.FC = () => {
@@ -33,9 +34,13 @@ const App: React.FC = () => {
 							<li>
 								<Link to='/rq-dynamic-parallel'>RQ dynamic Parallel</Link>
 							</li>
+							<li>
+								<Link to='/rq-dependent-queries'>RQ dependent Queries</Link>
+							</li>
 						</ul>
 					</nav>
 					<Routes>
+						<Route path='/rq-dependent-queries' element={<DependentQueries userId={'3'}/>} />
 						<Route path='/rq-dynamic-parallel' element={<DynamicParallel heroIds={[1,3]}/>} />
 						<Route path='/rq-parallel' element={<ParallelQueries />} />
 						<Route path='/rq-super-heroes/:heroId' element={<RQSuperhero />} />
