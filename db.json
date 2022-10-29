@@ -44,5 +44,39 @@
 			"id": 2,
 			"name": "Zbyszek"
 		}
+	],
+	"colors": [
+		{
+			"id": 1,
+			"label": "red"
+		},
+		{
+			"id": 2,
+			"label": "green"
+		},
+		{
+			"id": 3,
+			"label": "blue"
+		},
+		{
+			"id": 4,
+			"label": "white"
+		},
+		{
+			"id": 5,
+			"label": "black"
+		},
+		{
+			"id": 6,
+			"label": "pink"
+		},
+		{
+			"id": 7,
+			"label": "yellow"
+		},
+		{
+			"id": 8,
+			"label": "orange"
+		}
 	]
 }
