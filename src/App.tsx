@@ -11,6 +11,7 @@ import ParallelQueries from './views/ParallelQueries'
 import DynamicParallel from './views/DynamicParallel'
 import DependentQueries from './views/DependentQueries'
 import PaginatedQueries from './views/PaginatedQueries'
+import InfiniteQueries from './views/InfiniteQueries'
 
 const queryClient = new QueryClient()
 const App: React.FC = () => {
@@ -41,9 +42,13 @@ const App: React.FC = () => {
 							<li>
 								<Link to='/rq-paginated-queries'>RQ Paginated Queries</Link>
 							</li>
+							<li>
+								<Link to='/rq-infinite-queries'>RQ Infinite Queries</Link>
+							</li>
 						</ul>
 					</nav>
 					<Routes>
+						<Route path='/rq-infinite-queries' element={<InfiniteQueries />} />
 						<Route path='/rq-paginated-queries' element={<PaginatedQueries />} />
 						<Route path='/rq-dependent-queries' element={<DependentQueries userId={'3'} />} />
 						<Route path='/rq-dynamic-parallel' element={<DynamicParallel heroIds={[1, 3]} />} />
